@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jogo da Velha</title>
+</head>
+
+<body>
+    <article class="content">
+        <section class="players">
+            <input type="text" class="input-player-1" placeholder="Jogador 1">
+            <div class="input-player-2">
+                <input type="text" placeholder="Jogador 2" class="name-player-2">
+                              
+                    <label class="switch">                        
+                        <div class="switch-wrapper">
+                            <input type="checkbox">
+                            <span class="switch-button">
+                        </div>
+                    </label>
+                
+
+            </div>
+
+            <h3 class="type-match">Tipo de partida</h3>
+            <div class="type-match-area">
+                <span>Melhor de 3</span>
+                
+                <label class="switch">                        
+                    <div class="switch-wrapper">
+                        <input type="checkbox">
+                        <span class="switch-button switch-button-border">
+                    </div>
+                </label>
+
+                <span>Melhor de 5</span>
+            </div>
+
+            <button class="play-button">Jogar</button>
+            <h3 class="match-history-title">Histórico de Partidas</h3>
+
+            <div class="match-history">
+                <div class="winner-area">
+                    <span class="winner-name">Vencedor</span>
+                    <span class="suqare-name">Primeiro Quadado</span>
+                </div>
+                <span class="scene">Cenário</span>
+                <span class="">Img</span>
+            </div>
+
+            <div class="match-history">
+                <div class="winner-area">
+                    <span class="winner-name">Vencedor</span>
+                    <span class="suqare-name">Primeiro Quadado</span>
+                </div>
+                <span class="scene">Cenário</span>
+                <span class="">Img</span>
+            </div>
+
+            <button class="restart">Reiniciar</button>
+
+        </section>
+
+        <section class="arena">
+            <div class="scoreboard">
+                <h2 class="scoreboard-title">Placar</h2>
+
+                <div class="scoreboard-area">
+                    <span class="score-p1">01</span>
+                    <span class="player">Jogador 1</span>
+                    <span class="score-p2">01</span>
+                </div>
+
+                
+            </div>
+
+            <div class="battlefield">
+                <div class="square square-0"></div>
+                <div class="square square-1"></div>
+                <div class="square square-2"></div>
+                <div class="square square-3"></div>
+                <div class="square square-4"></div>
+                <div class="square square-5"></div>
+                <div class="square square-6"></div>
+                <div class="square square-7"></div>
+                <div class="square square-8"></div>
+            </div>
+
+        </section>
+
+        <section class="history">
+
+            <h3 class="history-title">Histórico de Jogadas</h3>
+
+            <div class="box-history">
+                <span class="player-name">O</span>
+                <div class="history-player">
+                    <span class="history-player-name">Jogador 1</span>
+                    <span class="history-player-place">Primeiro Quadrado</span>
+                </div>
+            </div>
+            <div class="box-history">
+                <span class="player-name">X</span>
+                <div class="history-player">
+                    <span class="history-player-name">Jogador 2</span>
+                    <span class="history-player-place">Primeiro Quadrado</span>
+                </div>
+            </div>
+
+
+            <div class="box-history">
+                <span class="player-name">O</span>
+                <div class="history-player">
+                    <span class="history-player-name">Jogador 1</span>
+                    <span class="history-player-place">Primeiro Quadrado</span>
+                </div>
+            </div>
+            <div class="box-history">
+                <span class="player-name">X</span>
+                <div class="history-player">
+                    <span class="history-player-name">Jogador 2</span>
+                    <span class="history-player-place">Primeiro Quadrado</span>
+                </div>
+            </div>
+
+            <div class="box-history">
+                <span class="player-name">O</span>
+                <div class="history-player">
+                    <span class="history-player-name">Jogador 1</span>
+                    <span class="history-player-place">Primeiro Quadrado</span>
+                </div>
+            </div>
+            <div class="box-history">
+                <span class="player-name">X</span>
+                <div class="history-player">
+                    <span class="history-player-name">Jogador 2</span>
+                    <span class="history-player-place">Primeiro Quadrado</span>
+                </div>
+            </div>
+
+            <div class="box-history">
+                <span class="player-name">O</span>
+                <div class="history-player">
+                    <span class="history-player-name">Jogador 1</span>
+                    <span class="history-player-place">Primeiro Quadrado</span>
+                </div>
+            </div>
+            <div class="box-history">
+                <span class="player-name">X</span>
+                <div class="history-player">
+                    <span class="history-player-name">Jogador 2</span>
+                    <span class="history-player-place">Primeiro Quadrado</span>
+                </div>
+            </div>
+
+        </section>
+
+    </article>
+    <script src="index.js"></script>
+</body>
+
+</html>

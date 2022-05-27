@@ -69,11 +69,17 @@ function verifyWinner() {
   if (filledFields == 9) return "draw"
 }
 
+function resetHistoryList(){
+  $historyMoveList.innerHTML = ""
+
+}
+
 function resetBattlefield() {
   for (const $boardItem of $boardList) {
     $boardItem.innerHTML = ""
   }
 }
+
 
 function move(boardIndex) {
   const $boardItem = $boardList[boardIndex]
@@ -91,9 +97,11 @@ function move(boardIndex) {
     printScore()
     printWinnerName(playerName)
     setTimeout(resetBattlefield, 1000)
+    setTimeout(resetHistoryList, 1000)
   }
   if (gameResult == "draw") {
     setTimeout(resetBattlefield, 1000)
+    setTimeout(resetHistoryList, 1000)
   }
   toggleMove()
   printMoveHistory(currentMove, playerName, boardIndex)

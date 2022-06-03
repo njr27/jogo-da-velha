@@ -92,11 +92,57 @@
 }
 
 .match-history{
+    display: flex;    
+    align-items: center;        
+    flex-direction: column;
+    height: 210px;
+    overflow-y: scroll;
+    margin-bottom: 30px;    
+}
+
+.match-history::-webkit-scrollbar {
+    width: 5px;    
+}
+  
+
+  
+.match-history::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.match-history-wrapper{
     display: flex;
     justify-content: space-between;
-    align-items: center;    
-    margin-bottom: 23px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    
 }
+
+.mini-board{
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mini-board-item{
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    font-size: 12px;
+    border-radius: 2px;
+    color: #828282;
+    font-weight: 700; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .winner-area{
     background-color: #ffffff;
@@ -106,7 +152,7 @@
     flex-direction: column;
     border-radius: 10px;
     width: 168px;
-    height: 50px;
+    height: 50px;    
     padding-left: 15px;
 }   
 
@@ -129,8 +175,8 @@
     font-weight: 500;
     border: 0;
     border-radius: 10px;
-    margin-top: 101px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
 }
 
 .restart:hover, .play-button:hover{

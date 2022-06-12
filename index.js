@@ -8,7 +8,8 @@ const $historyMoveList = document.querySelector(".box-history-list")
 const $matchHistoty = document.querySelector('.match-history')
 const $switcherBot = document.querySelector('.checkbox-bot')
 const $switcherMD = document.querySelector('.checkbox-md')
-
+const $restartButton = document.querySelector('.restart')
+const $playButton = document.querySelector('.play-button')
 
 let currentMove = "X"
 let scorePlayer1 = 0
@@ -116,13 +117,11 @@ const verifryBestOf = () => {
 
 
 const printMatchHistory = (winner, scenery) => {
-let miniBoardScenery = ''
-for (const move of scenery){
-  miniBoardScenery += ` <span class="mini-board-item">${move}</span> `
+  let miniBoardScenery = ''
 
-}
-
-
+  scenery.forEach((move) => {
+    miniBoardScenery += ` <span class="mini-board-item">${move}</span> `
+  })
 
   $matchHistoty.innerHTML += `
   <div class="match-history-wrapper">
@@ -146,10 +145,9 @@ const verifyWinner = () => {
   let filledFields = 0
 
   for (const condition of winConditions) {
-    const $field0 = $boardList[condition[0]]
+    const $field0 = $boardList[condition[0]]    
     const $field1 = $boardList[condition[1]]
     const $field2 = $boardList[condition[2]]
-
     if (
       $field0.innerHTML != "" &&
       $field0.innerHTML == $field1.innerHTML &&
@@ -160,7 +158,7 @@ const verifyWinner = () => {
   }
 
   
-  $boardList.forEach(($field) =>{
+  $boardList.forEach(($field) => {
     if ($field.innerHTML != 0) filledFields++
   })
 
@@ -183,9 +181,9 @@ const resetVariablesScore = () => {
 }
 
 const resetBattlefield = () => {
-  for (const $boardItem of $boardList) {
+  $boardList.forEach(($boardItem) => {
     $boardItem.innerHTML = ""
-  }
+  })  
 }
 
 const toggleBestOf = () => {
@@ -287,4 +285,20 @@ $switcherBot.addEventListener('click', () => {
 
 $switcherMD.addEventListener('click', () => {
   toggleBestOf()
+})
+
+
+$restartButton.addEventListener('click', () => {
+  resetHistoryList()
+  resetScoreboard()
+  resetVariablesScore()
+  resetBattlefield()
+  currentMove = "X"
+  $matchHistoty.innerHTML = ''
+  $winnerName.textContent = 'Vencedor'
+
+})
+
+$playButton.addEventListener('click', () => {
+  gameStart = !gameStart
 })

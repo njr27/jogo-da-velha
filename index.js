@@ -14,7 +14,7 @@ const $playButton = document.querySelector('.play-button')
 let currentMove = "X"
 let scorePlayer1 = 0
 let scorePlayer2 = 0
-let gameStart = true
+let gameStart = false
 let botActive = false
 let bestOf = 3 
 
@@ -296,9 +296,14 @@ $restartButton.addEventListener('click', () => {
   currentMove = "X"
   $matchHistoty.innerHTML = ''
   $winnerName.textContent = 'Vencedor'
-
+  gameStart = false
+  $playButton.textContent = "Iniciar"
+  $playButton.classList.remove('play')
 })
 
 $playButton.addEventListener('click', () => {
   gameStart = !gameStart
+  $playButton.textContent = gameStart ? 'Parar' : 'Jogar'
+  $playButton.classList.toggle('play')
+
 })

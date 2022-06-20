@@ -53,6 +53,41 @@ const dictionaryIndexBoard = ['Primeiro', 'Segundo', 'Terceiro', 'Quarto', 'Quin
 
 const printMoveHistory = (move, playerName, boardIndex) => {
 
+  //Tentativa de criação dinâmica dos elementos do histórico de jogadas
+
+  // const _div = document.createElement('div')  
+  // _div.classList.add("box-history")
+  // $historyMoveList.appendChild(_div)
+
+  // const $boxHistory = document.querySelector(".box-history")
+
+  // const _span = document.createElement('span')
+  // _span.classList.add("player-name")
+
+  // $boxHistory.appendChild(_span)
+
+  // _span.textContent = move
+
+  // const _div2 = document.createElement('div')
+
+  // _div2.classList.add("history-player")
+  // $boxHistory.appendChild(_div2)
+
+  // const $historyPlayer = document.querySelector(".history-player")
+
+  // const _span2 = document.createElement('span')
+  // _span2.classList.add("history-player-name")
+  // _span2.textContent = playerName
+
+  // $historyPlayer.appendChild(_span2)
+
+  
+  
+
+
+  
+
+
 
   $historyMoveList.innerHTML += `
   <div class="box-history">
